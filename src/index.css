@@ -94,6 +94,7 @@ h1{
   letter-spacing: 0;
   color: var(--color-gray-paragraph);
   @apply text-sm md:text-base;
+  
 
 }
 

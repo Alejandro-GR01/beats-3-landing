@@ -1,3 +1,4 @@
+import Case from "./components/Case"
 import Hero from "./components/Hero"
 import NavBar from "./components/NavBar"
 import Specs from "./components/Specs"
@@ -11,6 +12,7 @@ const App = () => {
       <Hero />
       <Sponsors />
       <Specs />
+      <Case />
     </>
   )
 }

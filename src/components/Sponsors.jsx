@@ -5,7 +5,7 @@ import youtube from '../assets/youtube.svg'
 
 const Sponsors = () => {
     return (
-        <section >
+        <section id='sponsors' >
             <div className='container'>
                 <div className=' flex flex-wrap justify-evenly md:justify-between items-center max-w-3xl mx-auto gap-4'>
 

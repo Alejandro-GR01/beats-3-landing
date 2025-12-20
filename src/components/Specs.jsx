@@ -18,7 +18,7 @@ const Specs = () => {
     const [specsHover, setSpecsHover] = useState(-1)
 
     return (
-        <section >
+        <section id='specs' >
             <div className="container">
                 <div className="flex flex-col items-center gap-16 md:gap-9 max-w-130 mx-auto">
                     <h2>Specs</h2>
@@ -46,7 +46,7 @@ const Specs = () => {
                                 >
                                     <img src={item.svg} alt={`icon-${item.title.toLowerCase()}`} height="25" width="25" />
                                     <p className="text-gray-130">{item.title}</p>
-                                    <p className="text-xs text-gray-paragraph">{item.description}</p>
+                                    <p className="text-[13px] text-gray-paragraph">{item.description}</p>
                                 </li>
                             ))}
                         </ul>

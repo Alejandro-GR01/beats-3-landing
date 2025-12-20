@@ -12,7 +12,7 @@ const NavBar = () => {
 
 
     return (
-        <nav id='navegation' onMouseLeave={()=>{ setNavShow(false)}} className='text-white absolute w-svw  z-20 top-0'>
+        <nav id='navbar' onMouseLeave={()=>{ setNavShow(false)}} className='text-white absolute w-svw  z-20 top-0'>
             <div className='container pt-6'>
                 <div  className='w- flex  justify-between items-center pb-4 md:pb-0  '>
                     <a href="#" className='button'>
