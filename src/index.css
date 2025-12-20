@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/*color */
+@theme{
+  --color-gray-120: #1e1e21;
+  --color-black-120: #0F0F10;
+  --color-white-120: #f2f2f3;
+  --color-gray-paragraph: #bdc0c2;
+  --color-gray-130: #f2f2f3;
+}
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  background-color: var(--color-black-120);
+}
+
+.container{
+  max-width: 1440px;
+  margin: 0 auto; 
+  @apply px-4 md:px-6 ; 
+}
+
+.nav-link{
+  position: relative;
+  &::after{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    height: 1px;
+    border-radius: 1px;
+    width: 0;
+    background-color: white;
+    transition: all ease-out 0.5s ;
+
+
+  }
+
+  &:hover{
+
+    &::after{
+      
+      width: 100%;
+    }
+  }
+}
+
+.button{
+  @apply cursor-pointer  hover:scale-105 transition-all duration-75 ease-out;
+}
+
+
+h1{
+  font-size: 40px ;
+  font-weight: 500;
+  color: var(--color-white-120);
+
+  span{
+    font-size: 80px;
+    display: block;
+    padding-left: 20px;
+    color: transparent;
+    background: linear-gradient(to bottom,#403B3E , #242526  );
+    background-clip: text;
+  }
+
+  @media (width >= 48rem) {
+    font-size: 64px;
+
+    span{
+      font-size: 120px;
+      padding-left: 48px;
+    }
+    
+  }
+}
+
+.paragraph{
+  line-height: 32px !important;
+  letter-spacing: 0;
+  color: var(--color-gray-paragraph);
+  @apply text-sm md:text-base;
+
+}
+
+.subheading{
+  color: var(--color-gray-130);
+  line-height: auto;
+  @apply text-lg md:text-xl font-semibold ;
+}
+
+
+h2{
+  font-size: 56px;
+  font-weight: 500;
+  color: transparent;
+  background: linear-gradient(to bottom,  #424245, #66667a1f);
+  background-clip: text;
+
+  @media(width > 48rem){
+    font-size: 72px;
+  }
+}
+
+section{
+  @apply py-11 md:py-16
+}
