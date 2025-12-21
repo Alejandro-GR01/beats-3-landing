@@ -5,12 +5,12 @@ const Case = () => {
     return (
         <section id="case-section">
             <div className="container">
-                <div className="flex flex-col items-center gap-16 md:gap-9  mx-auto">
+                <div className="flex flex-col items-center gap-16 md:gap-9 mx-auto">
                     <h2>Case</h2>
                     <div className=" flex md:gap-20 ">
-                        <img src={caseImage} alt="case image" width={250} height={349} className='-translate-x-[40%] md:ml-0 w-60 md:w-75 h-auto' />
+                        <img src={caseImage} alt="case image" width={250} height={349} className='-translate-x-[40%] md:translate-x-0 md:ml-0 w-60 md:w-75 h-auto' />
 
-                        <div className='flex flex-col justify-center items-start gap-9 md:gap-11 max-w-61 -ml-5 md:ml-0  '>
+                        <div className='flex flex-col   justify-center items-start gap-9 md:gap-11 max-w-61 -ml-5 md:ml-0  '>
                             <p className='paragraph text-[15px]! md:text-base!'>With a comfortable and adaptable case so that you can store it whenever you want, and keep your durability forever.</p>
 
 

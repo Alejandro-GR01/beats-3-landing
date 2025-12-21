@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 /*color */
-@theme{
+@theme {
   --color-gray-120: #1e1e21;
-  --color-black-120: #0F0F10;
+  --color-black-120: #0f0f10;
   --color-white-120: #f2f2f3;
   --color-gray-paragraph: #bdc0c2;
   --color-gray-130: #f2f2f3;
@@ -28,95 +28,108 @@ body {
   background-color: var(--color-black-120);
 }
 
-.container{
+.container {
   max-width: 1440px;
-  margin: 0 auto; 
-  @apply px-4 md:px-6 ; 
+  margin: 0 auto;
+  @apply px-4 md:px-6;
 }
 
-.nav-link{
+.nav-link {
   position: relative;
-  &::after{
+  &::after {
     position: absolute;
     top: 100%;
     left: 0;
-    content: '';
+    content: "";
     height: 1px;
     border-radius: 1px;
     width: 0;
     background-color: white;
-    transition: all ease-out 0.5s ;
-
-
+    transition: all ease-out 0.5s;
   }
 
-  &:hover{
-
-    &::after{
-      
+  &:hover {
+    &::after {
       width: 100%;
     }
   }
 }
 
-.button{
-  @apply cursor-pointer  hover:scale-105 transition-all duration-75 ease-out;
+.button {
+  @apply cursor-pointer  hover:scale-105 hover:shadow-2xl shadow-xl transition-all duration-75 ease-out;
 }
 
-
-h1{
-  font-size: 40px ;
+h1 {
+  font-size: 40px;
   font-weight: 500;
   color: var(--color-white-120);
 
-  span{
+  span {
     font-size: 80px;
     display: block;
     padding-left: 20px;
     color: transparent;
-    background: linear-gradient(to bottom,#403B3E , #242526  );
+    background: linear-gradient(to bottom, #403b3e, #242526);
     background-clip: text;
   }
 
   @media (width >= 48rem) {
     font-size: 64px;
 
-    span{
+    span {
       font-size: 120px;
       padding-left: 48px;
     }
-    
   }
 }
 
-.paragraph{
+.paragraph {
   line-height: 32px !important;
   letter-spacing: 0;
   color: var(--color-gray-paragraph);
   @apply text-sm md:text-base;
-  
-
 }
 
-.subheading{
+.subheading {
   color: var(--color-gray-130);
   line-height: auto;
-  @apply text-lg md:text-xl font-semibold ;
+  @apply text-lg md:text-xl font-semibold;
 }
 
-
-h2{
+h2 {
   font-size: 56px;
   font-weight: 500;
   color: transparent;
-  background: linear-gradient(to bottom,  #424245, #66667a1f);
+  background: linear-gradient(to bottom, #424245, #66667a1f);
   background-clip: text;
 
-  @media(width > 48rem){
+  @media (width > 48rem) {
     font-size: 72px;
   }
 }
 
-section{
-  @apply py-11 md:py-16
+.hero-cta {
+  @apply text-lg md:text-2xl font-semibold text-white-120;
+}
+.paragraph-cta {
+  letter-spacing: 0;
+  color: var(--color-gray-paragraph);
+  @apply text-sm md:text-base;
+}
+
+section {
+  @apply py-11 md:py-16;
+  max-width: 100svw;
+  overflow-x: hidden ;
+}
+
+.image-cta{
+  @apply w-75 h-auto md:w-88 md:relative absolute -bottom-11 right-0 translate-x-[50%] sm:translate-x-[30%] md:translate-x-0 md:bottom-auto md:right-auto z-0 ;
+}
+
+.shop-heading span{
+    color: transparent;
+  background: linear-gradient(to bottom, #424245, #66667a1f);
+  background-clip: text;
+  display: block;
 }
