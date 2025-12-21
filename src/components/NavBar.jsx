@@ -15,7 +15,7 @@ const NavBar = () => {
         <nav id='navbar' onMouseLeave={()=>{ setNavShow(false)}} className='text-white absolute w-svw  z-20 top-0'>
             <div className='container pt-6'>
                 <div  className='w- flex  justify-between items-center pb-4 md:pb-0  '>
-                    <a href="#" className='button'>
+                    <a href="#" className='button rounded-full'>
                     <img className='w-6 h-6 md:w-8 md:h-8' src={logo} alt="logo" />
 
                     </a>

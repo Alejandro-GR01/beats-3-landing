@@ -69,7 +69,7 @@ h1 {
     display: block;
     padding-left: 20px;
     color: transparent;
-    background: linear-gradient(to bottom, #403b3e, #242526);
+    background: linear-gradient(to bottom, #403b3e, #24252649);
     background-clip: text;
   }
 
@@ -100,7 +100,7 @@ h2 {
   font-size: 56px;
   font-weight: 500;
   color: transparent;
-  background: linear-gradient(to bottom, #424245, #66667a1f);
+  background: linear-gradient(to bottom, #424245, #00000000);
   background-clip: text;
 
   @media (width > 48rem) {
@@ -120,16 +120,53 @@ h2 {
 section {
   @apply py-11 md:py-16;
   max-width: 100svw;
-  overflow-x: hidden ;
+  overflow-x: hidden;
 }
 
-.image-cta{
-  @apply w-75 h-auto md:w-88 md:relative absolute -bottom-11 right-0 translate-x-[50%] sm:translate-x-[30%] md:translate-x-0 md:bottom-auto md:right-auto z-0 ;
+.image-cta {
+  @apply w-75 h-auto md:w-88 md:relative absolute -bottom-11 right-0 translate-x-[50%] sm:translate-x-[30%] md:translate-x-0 md:bottom-auto md:right-auto z-0;
 }
 
-.shop-heading span{
-    color: transparent;
-  background: linear-gradient(to bottom, #424245, #66667a1f);
+.shop-heading span {
+  color: transparent;
+  background: linear-gradient(to bottom, #424245, #00000000);
   background-clip: text;
   display: block;
+}
+
+#footer h2 {
+  color: var(--color-gray-130);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#footer a {
+  color: var(--color-gray-paragraph);
+  font-size: 15px;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
+  
+
+  &:hover{
+    color: white;
+  }
+  &:focus{
+    color: white;
+  }
+}
+#footer .links a {
+  width: 32px;
+  height: 32px;
+  filter: opacity(0.6);
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    filter: opacity(1);
+    transform: scale(110%);
+  }
+
+  &:focus {
+    filter: opacity(1);
+    transform: scale(110%);
+  }
 }
