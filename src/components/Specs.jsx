@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useEffectEvent, useState } from 'react'
 import specsImg from '../assets/specs.png'
 import { specsItems } from '../constants'
 
@@ -36,10 +36,10 @@ const Specs = () => {
                                         transformStyle: 'preserve-3d',
                                         transform: index === specsHover ? 'translateX(-18px) translateZ(30px) scale(1.06)' :
                                             index === specsHover + 1 || index === specsHover - 1 ? 'translateX(-10px) translateZ(10px) scale(1.01)' :
-                                            'translateX(0) translateZ(0) scale(1)',
-                                           transition: index === specsHover ? 'transform .8s cubic-bezier(.2,.8,.2,1)' :
-                                               (index === specsHover + 1 || index === specsHover - 1) ? 'transform 1s cubic-bezier(.2,.8,.2,1)' :
-                                               'transform .8s cubic-bezier(.2,.8,.2,1)',
+                                                'translateX(0) translateZ(0) scale(1)',
+                                        transition: index === specsHover ? 'transform .8s cubic-bezier(.2,.8,.2,1)' :
+                                            (index === specsHover + 1 || index === specsHover - 1) ? 'transform 1s cubic-bezier(.2,.8,.2,1)' :
+                                                'transform .8s cubic-bezier(.2,.8,.2,1)',
                                         willChange: 'transform',
                                         boxShadow: index === specsHover ? '0 12px 30px rgba(0,0,0,0.12)' : 'none'
                                     }}
@@ -54,8 +54,9 @@ const Specs = () => {
                         <img
                             src={specsImg}
                             alt="beats-specs image" height='270px' width='250px'
-                            className='h-67.5 w-auto md:h-81 -mr-12 md:-mr-8 sticky top-5  '
+                            className='h-67.5 w-auto md:h-full md:max-h-81 -mr-12 md:-mr-8 sticky top-5  '
                         />
+
 
                     </div>
                 </div>

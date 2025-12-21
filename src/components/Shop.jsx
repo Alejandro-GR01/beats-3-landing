@@ -9,7 +9,7 @@ const Shop = () => {
                     <h2 className="max-w-88 md:max-w-90 text-center shop-heading"> <span>Choose</span><span>Your Style</span></h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-9 md:gap-11  mx-auto">
                         {shopItems.map(item => (
-                            <div key={item.label} className="  flex flex-col justify-between items-center gap-4 relative hover:scale-105 hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300 " role="button" tabIndex={0}>
+                            <div key={item.label} className="  flex flex-col justify-between items-center gap-4 relative hover:scale-105 focus:scale-105 hover:-translate-x-2 focus:-translate-x-2 hover:-translate-y-2 focus:-translate-y-2 focus-none  transition-transform duration-300 " role="button" tabIndex={0}>
                                 <img src={item.image} alt={`beats-${item.label.toLowerCase()}`} height={127} width={95} className="-mb-20 relative z-10" />
                                 <div className="bg-gray-120 pt-20! p-3.5 flex gap-1.5 justify-between items-end rounded-xl w-41 h-38 ">
                                     <div className="flex flex-col gap-1 text-sm font-semibold  ">
