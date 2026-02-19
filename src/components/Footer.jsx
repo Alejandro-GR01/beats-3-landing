@@ -28,8 +28,8 @@ const Footer = () => {
 
     return (
         <section ref={footerRef} id="footer" className="overflow-y-hidden">
-            <div className="footer-container container py-15   bg-[#313133]">
-                <footer className="flex flex-col gap-5 md:grid md:grid-cols-5 md:justify-start md:items-start  ">
+            <div className="footer-container  py-15   bg-[#313133]">
+                <footer className="container flex flex-col gap-5 md:grid md:grid-cols-5 md:justify-start md:items-start  ">
                     <a href="#" className='button w-fit rounded-full'>
                         <img className='w-6 h-6 md:w-8 md:h-8' src={footer} alt="logo" />
                     </a>
