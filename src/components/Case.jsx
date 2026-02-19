@@ -1,16 +1,54 @@
+
+import { useRef } from 'react'
 import caseImage from '../assets/case.png'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 
 const Case = () => {
+    const case_container = useRef(null)
+    
+    useGSAP(()=> {
+
+        gsap.registerPlugin(ScrollTrigger)
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#case-section',
+                start: 'top 80%',
+                end: 'center top'
+            }
+        })
+
+        tl.from('.case-heading', {
+            y: 20,
+            opacity: 0,
+            duration: 0.2
+        })
+        .from('.case-image', {
+            x: -100,
+            duration: 0.5,
+            ease : 'powe2.out',
+            opacity: 0
+        }).from('.case-content', {
+            x: -100,
+            duration: 1,
+            ease: 'power2.out',
+            opacity: 0
+        })
+
+    }, [{scope: case_container}])
+
     return (
-        <section id="case-section">
+        <section ref={case_container} id="case-section">
             <div className="container">
                 <div className="flex flex-col items-center gap-16 md:gap-9 mx-auto">
-                    <h2>Case</h2>
+                    <h2 className='case-heading'>Case</h2>
                     <div className=" flex md:gap-20 ">
-                        <img src={caseImage} alt="case image" width={250} height={349} className='-translate-x-[40%] md:translate-x-0 md:ml-0 w-60 md:w-75 h-auto' />
+                        <img src={caseImage} alt="case image" width={250} height={349} className='case-image -translate-x-[40%] md:translate-x-0 md:ml-0 w-60 md:w-75 h-auto' />
 
-                        <div className='flex flex-col   justify-center items-start gap-9 md:gap-11 max-w-61 -ml-5 md:ml-0  '>
+                        <div className='case-content flex flex-col   justify-center items-start gap-9 md:gap-11 max-w-61 -ml-5 md:ml-0  '>
                             <p className='paragraph text-[15px]! md:text-base!'>With a comfortable and adaptable case so that you can store it whenever you want, and keep your durability forever.</p>
 
 

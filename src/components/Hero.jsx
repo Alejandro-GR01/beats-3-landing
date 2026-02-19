@@ -1,10 +1,32 @@
+import { useRef } from 'react'
 import beats from '../assets/beats 3 hero.png'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const Hero = () => {
+  const container = useRef(null)
+
+  useGSAP(() => {
+
+    gsap.from('#hero img', {
+      y: -100,
+      duration: 1,
+      ease: 'power2.out',
+      opacity: 0,
+    })
+    gsap.from('#hero-content', {
+      y: -100,
+      duration: 1,
+      delay: 0.3,
+      ease: 'power2.out',
+      opacity: 0,
+
+    })
+  }, [{ scope: container }])
   return (
-    <section id="hero" className='relative z-0 pt-0!'>
+    <section ref={container} id="hero" className='relative z-0 pt-0!'>
       <div className="container relative ">
-        <div className="relative flex flex-col gap-10 justify-center items-start  md:pl-[38svw] pt-46 md:pt-32  z-10 ">
+        <div id='hero-content' className="relative flex flex-col gap-10 justify-center items-start  md:pl-[38svw] pt-46 md:pt-32  z-10 ">
           <h1 ><span>On ear</span>Beats 3</h1>
 
           <div className="flex flex-col gap-5 max-w-md  md:max-w-sm  ">

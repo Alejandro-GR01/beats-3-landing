@@ -15,19 +15,19 @@ import collection from '../assets/nba.png'
 export const navLinks = [
     {
         label: 'Home',
-        url: '#home'
+        url: '#hero'
     },
     {
         label: 'Specs',
-        url: '#'
+        url: '#specs'
     },
     {
         label: 'Case',
-        url: '#'
+        url: '#case-section'
     },
     {
         label: 'Products',
-        url: '#'
+        url: '#shop'
     }
 
 ]

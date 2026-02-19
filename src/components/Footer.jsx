@@ -1,9 +1,34 @@
+import { useRef } from "react"
 import footer from "../assets/logo-footer.svg"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const Footer = () => {
+    const footerRef = useRef(null)
+
+
+    useGSAP(()=> {
+        gsap.registerPlugin(ScrollTrigger)
+
+        gsap.from('.footer-container', {
+            scrollTrigger: {
+                trigger: '#footer',
+                start: 'top 90%',
+            },
+            y: 200,
+            duration: 1,
+            ease: 'power2.inOut',
+
+
+        })
+
+
+    }, [{scope: footerRef}])
+
     return (
-        <section id="footer">
-            <div className="container">
+        <section ref={footerRef} id="footer" className="overflow-y-hidden">
+            <div className="footer-container container py-15   bg-[#313133]">
                 <footer className="flex flex-col gap-5 md:grid md:grid-cols-5 md:justify-start md:items-start  ">
                     <a href="#" className='button w-fit rounded-full'>
                         <img className='w-6 h-6 md:w-8 md:h-8' src={footer} alt="logo" />
@@ -30,7 +55,7 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col gap-8 md:col-span-2">
                         <form className="relative h-fit w-fill flex flex-col items-stretch ">
-                            <input type="email" placeholder="Email" className="w-fill relative bg-gray-120 rounded-lg h-16.5 px-4 placeholder:text-[15px] placeholder:text-gray-paragraph" />
+                            <input type="email" placeholder="Email" className="w-fill relative bg-gray-120 text-white rounded-lg h-16.5 px-4 placeholder:text-[15px] placeholder:text-gray-paragraph" />
                             <div className="button flex justify-center items-center bg-black-120 gap-2.5 py-4.5 px-5.5 w-fit rounded-lg absolute top-1.5 right-4 " tabIndex={0}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                     <path d="M7.43433 9.0001H3.00034L1.51759 3.10135C1.50809 3.06707 1.50231 3.03186 1.50034 2.99635C1.48384 2.4556 2.07934 2.0806 2.59534 2.3281L16.5003 9.0001L2.59534 15.6721C2.08534 15.9173 1.49734 15.5528 1.50034 15.0218C1.50185 14.9744 1.51019 14.9274 1.52509 14.8823L2.62534 11.2501" stroke="#F8F8F8" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />

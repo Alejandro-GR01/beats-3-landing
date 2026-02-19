@@ -1,5 +1,7 @@
-import  {  useState } from 'react'
+import  {  useRef, useState } from 'react'
 import { navLinks } from '../constants'
+import gsap from 'gsap'
+import {useGSAP}from'@gsap/react'
 
 
 import burger from '../assets/amburger-icon.svg'
@@ -7,12 +9,25 @@ import logo from '../assets/logo-nav.svg'
 
 const NavBar = () => {
    const [navShow, setNavShow] = useState(false)
+   
+    const nav = useRef(null)
+
+    useGSAP(()=> {
+        gsap.from('nav',{
+          y: -100 ,
+          duration: 1,
+          ease: 'power2.out',
+              opacity: 0,
+          
+        })
+    },[{scope: nav}])
+
 
  
 
 
     return (
-        <nav id='navbar' onMouseLeave={()=>{ setNavShow(false)}} className='text-white absolute w-svw  z-20 top-0'>
+        <nav ref={nav} id='navbar' onMouseLeave={()=>{ setNavShow(false)}} className='text-white absolute w-svw  z-20 top-0  '>
             <div className='container pt-6'>
                 <div  className='w- flex  justify-between items-center pb-4 md:pb-0  '>
                     <a href="#" className='button rounded-full'>

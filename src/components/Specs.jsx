@@ -1,17 +1,6 @@
-import React, { useEffect, useEffectEvent, useState } from 'react'
+import React, { useState } from 'react'
 import specsImg from '../assets/specs.png'
 import { specsItems } from '../constants'
-
-const Specification = ({ children, title, description }) => {
-
-    return (
-        <li className="flex flex-col gap-1 max-w-36">
-            {children}
-            <p className="text-gray-130">{title}</p>
-            <p className="text-xs text-gray-paragraph">{description}</p>
-        </li>
-    )
-}
 
 const Specs = () => {
 
