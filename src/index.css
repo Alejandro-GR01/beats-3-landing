@@ -21,11 +21,16 @@ body {
   height: 100%;
   max-width: 100svw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   line-height: 1;
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+  font-family:
+    "Poppins",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
     sans-serif;
   background-color: var(--color-black-120);
 }
@@ -36,8 +41,8 @@ body {
   @apply px-4 md:px-6;
 }
 
-#navbar{
-  background-color:  #1e1e213e;
+#navbar {
+  background-color: #1e1e213e;
   backdrop-filter: blur(10px);
 }
 
@@ -141,7 +146,7 @@ section {
   display: block;
 }
 
-#footer{
+#footer {
   padding: 0;
 }
 
@@ -156,12 +161,11 @@ section {
   font-size: 15px;
   width: fit-content;
   transition: all 0.1s ease-in-out;
-  
 
-  &:hover{
+  &:hover {
     color: white;
   }
-  &:focus{
+  &:focus {
     color: white;
   }
 }
@@ -182,8 +186,6 @@ section {
   }
 }
 
-
 .focus-none[role="button"] {
   outline: none;
-
 }

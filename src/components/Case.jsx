@@ -16,7 +16,7 @@ const Case = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '#case-section',
-                start: 'top 80%',
+                start: 'top 40%',
                 end: 'center top'
             }
         })
