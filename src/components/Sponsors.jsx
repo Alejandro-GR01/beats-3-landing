@@ -35,19 +35,19 @@ const Sponsors = () => {
     return (
         <section ref={container} id='sponsors'  >
             <div className='container'>
-                <div className='sponsors-container flex flex-wrap justify-evenly md:justify-between items-center max-w-3xl mx-auto gap-4'>
+                <div className='sponsors-container flex flex-wrap justify-evenly md:justify-between items-center max-w-3xl mx-auto gap-8 md:gap-4'>
 
                     <div className='sponsor-icon'>
-                        <img src={apple} alt="apple icon" />
+                        <img height={80} width={120} src={apple} alt="apple icon" />
                     </div>
                     <div className='sponsor-icon'>
-                        <img src={spotify} alt="spotify icon" />
+                        <img height={80} width={120} src={spotify} alt="spotify icon" />
                     </div>
                     <div className='sponsor-icon'>
-                        <img src={amazon} alt="amazon icon" />
+                        <img height={80} width={120} src={amazon} alt="amazon icon" />
                     </div>
                     <div className='sponsor-icon'>
-                        <img src={youtube} alt="youtube icon" />
+                        <img height={70} width={100} src={youtube} alt="youtube icon" />
                     </div>
                 </div>
 

@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import beats from '../assets/beats 3 hero.png'
+import beatsAvif from '../assets/beats 3 hero.avif'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
@@ -8,7 +9,7 @@ const Hero = () => {
 
   useGSAP(() => {
 
-    gsap.from('#hero img', {
+    gsap.from('.hero-img', {
       y: -100,
       duration: 1,
       ease: 'power2.out',
@@ -47,7 +48,19 @@ const Hero = () => {
         </div>
 
         <div className='absolute -top-42 md:-top-6 z-0 right-4 md:left-[6svw] max-w-[70svw] md:w-auto'>
-          <img src={beats} alt="beats-3 image" width="300px" height="702px" />
+
+          <picture>
+            <source srcSet={beatsAvif} type="image/avif" />
+            <img
+              className="hero-img"
+              loading="eager"
+              src={beats}
+              alt="beats-3 image"
+              width="300"
+              height="702"
+            />
+          </picture>
+
         </div>
 
       </div>

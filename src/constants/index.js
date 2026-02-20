@@ -10,6 +10,12 @@ import yellow from '../assets/yellow.png'
 import blue from '../assets/blue.png'
 import gray from '../assets/gray.png'
 import collection from '../assets/nba.png'
+import blackAvif from '../assets/black.avif'
+import redAvif from '../assets/red.avif'
+import yellowAvif from '../assets/yellow.avif'
+import blueAvif from '../assets/blue.avif'
+import grayAvif from '../assets/gray.avif'
+import collectionAvif from '../assets/nba.avif'
 
 
 export const navLinks = [
@@ -59,30 +65,36 @@ export const specsItems = [
 export const shopItems = [
     {
         image: black, 
+        imageAvif: blackAvif,
         label: 'Black',
         model: 'N299K'
     },
     {   
         image: red,
+        imageAvif : redAvif,
         label: 'Red Black',
         model: 'N299K'     
     },
     {  
         image: yellow,
+        imageAvif: yellowAvif,
         label: 'Night Black',    
         model: 'N299K'
     },
     {   image: blue,
+        imageAvif: blueAvif,
         label: 'Blue',
         model: 'N299K'     
     },
     {
-        image:gray,   
+        image:gray,
+        imageAvif: grayAvif,   
         label: 'Twilight Gray',
         model: 'N299K'  
     },
     {
         image: collection,
+        imageAvif: collectionAvif,
         label:'NBA Collection',
         model: 'N399K'
     }

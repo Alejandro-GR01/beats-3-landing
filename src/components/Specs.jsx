@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import specsImg from '../assets/specs.png'
+import specsAvif from '../assets/specs.avif'
 import { specsItems } from '../constants'
 
 const Specs = () => {
@@ -40,11 +41,17 @@ const Specs = () => {
                             ))}
                         </ul>
 
-                        <img
-                            src={specsImg}
-                            alt="beats-specs image" height='270px' width='250px'
-                            className='h-67.5 w-auto md:h-full md:max-h-81 -mr-12 md:-mr-8 sticky top-5  '
-                        />
+                        <picture>
+                            <source srcSet={specsAvif} type="image/avif" />
+                            <img
+
+                                src={specsImg}
+                                alt="beats-specs image" height='270px' width='250px'
+                                className='h-67.5 w-auto md:h-full md:max-h-81 -mr-12 md:-mr-8 sticky top-5  '
+                            />
+
+
+                        </picture>
 
 
                     </div>
