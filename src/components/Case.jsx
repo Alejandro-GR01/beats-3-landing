@@ -25,16 +25,16 @@ const Case = () => {
         tl.from('.case-heading', {
             y: 20,
             opacity: 0,
-            duration: 0.2
+            duration: 0.1
         })
             .from('.case-image', {
                 x: -100,
-                duration: 0.5,
+                duration: 0.2,
                 ease: 'powe2.out',
                 opacity: 0
             }).from('.case-content', {
                 x: -100,
-                duration: 1,
+                duration: 0.2,
                 ease: 'power2.out',
                 opacity: 0
             })
