@@ -2,7 +2,13 @@
 
 Una landing page moderna y elegante para **Beats 3** headphones, construida con **React**, **Vite**, **Tailwind CSS** y **GSAP**. 
 
-![Beats 3 Landing](https://alejandro-gr01.github.io/beats-3-landing/)
+Ver en: [https://alejandro-gr01.github.io/beats-3-landing/](https://alejandro-gr01.github.io/beats-3-landing/)
+
+## 📸 Preview
+
+<img src="./public/beats-3_preview.png" width="100%" alt="Beats 3 Landing Preview"/>
+
+
 
 ## 🎧 Descripción
 
@@ -100,7 +106,7 @@ El proyecto está configurado para deploy automático en GitHub Pages:
 pnpm run deploy
 ```
 
-Ver en: [https://alejandro-gr01.github.io/beats-3-landing/](https://alejandro-gr01.github.io/beats-3-landing/)
+
 
 ## ✨ Mejoras Futuras
 
