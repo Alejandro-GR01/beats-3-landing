@@ -58,7 +58,10 @@ const Hero = () => {
               alt="beats-3 image"
               width="300"
               height="702"
+              fetchPriority='high'
+              
             />
+            
           </picture>
 
         </div>
