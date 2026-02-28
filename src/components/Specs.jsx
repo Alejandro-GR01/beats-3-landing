@@ -13,7 +13,7 @@ const Specs = () => {
                 <div className="flex flex-col items-center gap-16 md:gap-9 max-w-130 mx-auto">
                     <h2>Specs</h2>
 
-                    <div className="relative w-full flex justify-between items-start ">
+                    <div className="relative w-full flex justify-between items-center gap-2 ">
                         <ul className="flex flex-col gap-6 pl-5 " style={{ perspective: '900px' }}>
                             {specsItems.map((item, index) => (
 
@@ -46,8 +46,8 @@ const Specs = () => {
                             <img
 
                                 src={specsImg}
-                                alt="beats-specs image" height='270px' width='250px'
-                                className='h-67.5 w-auto md:h-full md:max-h-81 -mr-12 md:-mr-8 sticky top-5  '
+                                alt="beats-specs image" 
+                                className='w-auto md:h-full md:max-h-81 md:-mr-18 sticky top-5  '
                             />
 
 

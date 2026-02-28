@@ -14,7 +14,7 @@ const Footer = () => {
         gsap.from('.footer-container', {
             scrollTrigger: {
                 trigger: '#footer',
-                start: 'top 90%',
+                start: 'top bottom',
             },
             y: 200,
             duration: 1,
