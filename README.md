@@ -1,7 +1,9 @@
 # Beats 3 - Landing Page
 
-Una landing page moderna y elegante para **Beats 3** headphones, construida con **React**, **Vite**, **Tailwind CSS** y **GSAP**. 
 
+Una landing page moderna de producto inspirada en los audífonos **Beats**, enfocada en una interfaz limpia, diseño responsive y una presentación atractiva del producto. El proyecto muestra layouts estructurados, secciones visuales fluidas y una interfaz orientada al marketing diseñada para destacar las características y especificaciones del producto.
+
+Construida con tecnologías modernas de frontend, la página enfatiza la usabilidad, la jerarquía visual y el comportamiento responsive en diferentes dispositivos.
 
 ## Live Demo
 Ver en: [https://alejandro-gr01.github.io/beats-3-landing/](https://alejandro-gr01.github.io/beats-3-landing/)
