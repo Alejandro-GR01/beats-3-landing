@@ -17,8 +17,8 @@ const NavBar = () => {
 
     return (
         <nav  id='navbar' onMouseLeave={() => { setNavShow(false) }} className='text-white absolute w-svw  z-20 top-0  '>
-            <div className='container pt-6'>
-                <div className='w- flex  justify-between items-center pb-4 md:pb-0  '>
+            <div className='container '>
+                <div className='w- flex  justify-between items-center py-4 md:py-2  '>
                     <a href="#" className='button rounded-full'>
                         <img className='w-6 h-6 md:w-8 md:h-8' src={logo} alt="logo" />
 
@@ -32,7 +32,7 @@ const NavBar = () => {
                         <ul className='flex flex-col md:flex-row justify-between items-center gap-6 md:gap-14'>
                             {navLinks.map(link => (
                                 <li key={link.label}>
-                                    <a className='font-bold text-base nav-link' href={link.url}>{link.label}</a>
+                                    <a className='font-bold text-base nav-link' href={link.url} onClick={()=> setNavShow(false)}>{link.label}</a>
                                 </li>
                             ))}
                         </ul>
